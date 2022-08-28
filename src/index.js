@@ -1,6 +1,7 @@
 require('./init');
 const cors = require("cors");
 const path = require('path');
+const process = require('process');
 const express = require('express');
 const morgan = require('morgan');
 const indexRouter = require( './routes/pages/index.routes' );
@@ -41,7 +42,7 @@ app.use( '/assesments', assesmentRouter );
 app.use( '/answers', answerRouter );
 app.use( '/questions', questionRouter );
 app.use( '/api/auth', usersRouter );
-const PORT = 8080;
+const PORT = process.env.PORT;
 
 app.listen( PORT, () => {
         console.log( `Server running on http://localhost:${PORT}` );
