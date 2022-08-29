@@ -14,6 +14,9 @@ const { request } = require('http');
 
 const app = express();
 
+app.use(cors({
+        origin: 'http://localhost:8080',
+}));
 const {connect}= require('./data/database');
 connect();
 
@@ -33,7 +36,6 @@ app.use( morgan( 'combined' ) ); // 'combined' -> Apache HTTP server format for 
 app.use( express.static( path.join( process.cwd(), 'public' ) ) );
 
 app.use( express.json() );
-app.use(cors());
 // to take care of reading data submitted using a form
 app.use( express.urlencoded() );
 
