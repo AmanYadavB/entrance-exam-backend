@@ -39,10 +39,10 @@ catch(err) {
     console.error(err.message);
 }
 
-// try {
-//     execSync(`mongoimport ${uri} --db ${DB_NAME} --collection users --drop --file ${path.join(__dirname,'seed/users.json')} --jsonArray`);
-//     console.log('successfully imported assesments documents in '+ DB_NAME + ' Database');
-// }
-// catch(err) {
-//     console.error(err.message);
-// }
+try {
+    execSync(`mongoimport ${uri} --db ${DB_NAME} --collection users --drop --file ${path.join(__dirname,'seed/users.json')} --jsonArray`);
+   console.log('successfully imported assesments documents in '+ DB_NAME + ' Database');
+}
+catch(err) {
+    console.error(err.message);
+}

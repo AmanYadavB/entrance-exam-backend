@@ -23,12 +23,12 @@ const connect = async () => {
             const dbUser = process.env.DB_USER;
             const dbPassword = process.env.DB_PASSWORD;
             const dbHost = process.env.DB_HOST;
-            await mongoose.connect( `mongodb+srv://${dbUser}:${dbPassword}@${dbHost}:27017/entranceExamDB?retryWrites=true&w=majority` );
+            await mongoose.connect( `mongodb+srv://${dbUser}:${dbPassword}@${dbHost}/entranceExamDB?retryWrites=true&w=majority` );
             console.log( 'connected to db' );
             //require('./init')
         }
     } catch( error ) {
-        console.error( error.message );
+        console.log( error );
         process.exit( 1 );
     }
 };

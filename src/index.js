@@ -15,7 +15,7 @@ const { request } = require('http');
 const app = express();
 
 app.use(cors({
-        origin: 'https://entrance-exam-aman.herokuapp.com',
+        origin: 'http://localhost:8080',
 }));
 const {connect}= require('./data/database');
 connect();
