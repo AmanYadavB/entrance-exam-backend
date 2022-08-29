@@ -1,0 +1,1 @@
+mongoimport --uri="mongodb+srv://admin:Password123@cluster0.u9uqfb9.mongodb.net/entranceExamDB?ssl=true&authSource=admin" --collection=assesments --drop --file="seed/assesments.json" --jsonArray

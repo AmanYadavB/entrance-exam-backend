@@ -1,0 +1,37 @@
+[{
+  "_id": {
+    "$oid": "62fffd0a9c44d5de551953aa"
+  },
+  "email": "aman1@example.com",
+  "name": "Aman Kumar Yadav",
+  "password": "$2b$10$nHB6u0rHNZCPkMELdFbmdO3MsEFR.BkJscuJ1eYut7Md7eoAw0LWq",
+  "role": "examinee",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6300046411529ffbf337143b"
+  },
+  "email": "aman@example.com",
+  "name": "Aman Kumar Yadav",
+  "password": "$2b$10$Z14TR3IGMnz3Wy6PnPTjuuta9.VDeJcPrM2AFWq5PSg8EUPXQovPO",
+  "role": "examiner",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6300052511529ffbf337143d"
+  },
+  "email": "Beauty123@love.com",
+  "name": "Beauty Singh",
+  "password": "$2b$10$zUzXTKClS45vPjZhFDr/iubbzObMp0ymsed4bzk.HiE7gWWqe3.5a",
+  "role": "examinee",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "630005c411529ffbf3371440"
+  },
+  "email": "sweta@wow.com",
+  "name": "Sweta",
+  "password": "$2b$10$q.hfuO4QNWMV8SzSiGOXJOJGhZ.BYLLTPpHSKAqIsgvrRjLbHEijy",
+  "role": "examinee",
+  "__v": 0
+}]

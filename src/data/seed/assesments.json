@@ -1,0 +1,108 @@
+[{
+  "_id": {
+    "$oid": "630a0496c125a12d30c0d0ed"
+  },
+  "name": "Entrance Exam 1",
+  "date": {
+    "date": 27,
+    "month": 8,
+    "year": 2022
+  },
+  "startTime": {
+    "hours": 0,
+    "minutes": 0
+  },
+  "endTime": {
+    "hours": 23,
+    "minutes": 59
+  },
+  "questions": [
+    {
+      "$oid": "62ffbfaadea21e4696ae6991"
+    },
+    {
+      "$oid": "62ffc097dea21e4696ae6993"
+    }
+  ],
+  "examinees": [
+    {
+      "$oid": "6300052511529ffbf337143d"
+    },
+    {
+      "$oid": "630005c411529ffbf3371440"
+    }
+  ],
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "630a72b9f8e6332e96aca8ce"
+  },
+  "name": "Entrance Exam 4",
+  "date": {
+    "date": 28,
+    "month": 8,
+    "year": 2022
+  },
+  "startTime": {
+    "hours": 1,
+    "minutes": 7
+  },
+  "endTime": {
+    "hours": 5,
+    "minutes": 11
+  },
+  "questions": [
+    {
+      "$oid": "62ffbe93dea21e4696ae698f"
+    },
+    {
+      "$oid": "62ffbfaadea21e4696ae6991"
+    }
+  ],
+  "examinees": [
+    {
+      "$oid": "6300052511529ffbf337143d"
+    },
+    {
+      "$oid": "630005c411529ffbf3371440"
+    }
+  ],
+  "__v": 0
+},
+{
+    "_id": {
+      "$oid": "630a0496c125a12d30c0d012"
+    },
+    "name": "Entrance Exam 3",
+    "date": {
+      "date": 27,
+      "month": 8,
+      "year": 2022
+    },
+    "startTime": {
+      "hours": 0,
+      "minutes": 0
+    },
+    "endTime": {
+      "hours": 23,
+      "minutes": 59
+    },
+    "questions": [
+      {
+        "$oid": "62ffbfaadea21e4696ae6991"
+      },
+      {
+        "$oid": "62ffc097dea21e4696ae6993"
+      }
+    ],
+    "examinees": [
+      {
+        "$oid": "6300052511529ffbf337143d"
+      },
+      {
+        "$oid": "630005c411529ffbf3371440"
+      }
+    ],
+    "__v": 0
+  }
+]

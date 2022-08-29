@@ -1,0 +1,129 @@
+[{
+  "_id": {
+    "$oid": "6303d5a86301c70b0b40dc95"
+  },
+  "exam": {
+    "$oid": "62ffc22f15f8a104d5df6a96"
+  },
+  "question": {
+    "$oid": "62ffbe93dea21e4696ae698f"
+  },
+  "userId": {
+    "$oid": "62fffd0a9c44d5de551953aa"
+  },
+  "answer": "public int solution (int input1,int input2) {\n    //write your code here    \n    return input1*10+input2*90;\n}",
+  "testCasesPassed": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6303d7026301c70b0b40dca8"
+  },
+  "exam": {
+    "$oid": "62ffc22f15f8a104d5df6a96"
+  },
+  "question": {
+    "$oid": "62ffbfaadea21e4696ae6991"
+  },
+  "userId": {
+    "$oid": "62fffd0a9c44d5de551953aa"
+  },
+  "answer": "public int solution (int input1) {\n    //write your code here    \n    return input1>30?1:0;\n}",
+  "testCasesPassed": "2",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6303d86e6301c70b0b40dcaf"
+  },
+  "exam": {
+    "$oid": "62ffc22f15f8a104d5df6a96"
+  },
+  "question": {
+    "$oid": "62ffc097dea21e4696ae6993"
+  },
+  "userId": {
+    "$oid": "62fffd0a9c44d5de551953aa"
+  },
+  "answer": "public int solution (int input1,int input2) {\n    //write your code here    \n    return a;\n}",
+  "testCasesPassed": "0",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6303d9866301c70b0b40dcc7"
+  },
+  "exam": {
+    "$oid": "630222a35d2e48e11d38903d"
+  },
+  "question": {
+    "$oid": "62ffbfaadea21e4696ae6991"
+  },
+  "userId": {
+    "$oid": "6300052511529ffbf337143d"
+  },
+  "answer": "I Love Aman Sir Very Much",
+  "testCasesPassed": "0",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6309240d6698ec92e3caf29b"
+  },
+  "exam": {
+    "$oid": "630923b66698ec92e3caf288"
+  },
+  "question": {
+    "$oid": "62ffbe93dea21e4696ae698f"
+  },
+  "userId": {
+    "$oid": "6300052511529ffbf337143d"
+  },
+  "answer": "public int solution (int input1,int input2) {\n    //write your code here    \n    return input1*10+input2*90;\n}",
+  "testCasesPassed": "3",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6309245e6698ec92e3caf2a6"
+  },
+  "exam": {
+    "$oid": "630923b66698ec92e3caf288"
+  },
+  "question": {
+    "$oid": "62ffbfaadea21e4696ae6991"
+  },
+  "userId": {
+    "$oid": "6300052511529ffbf337143d"
+  },
+  "answer": "public int solution (int input1) {\n    //write your code here    \n    return input1>30?1:0;\n}",
+  "testCasesPassed": "2",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "630924846698ec92e3caf2b6"
+  },
+  "exam": {
+    "$oid": "630923b66698ec92e3caf288"
+  },
+  "question": {
+    "$oid": "62ffbe93dea21e4696ae698f"
+  },
+  "userId": {
+    "$oid": "62fffd0a9c44d5de551953aa"
+  },
+  "answer": "public int solution (int input1,int input2) {\n    //write your code here    \n    return 890;\n}",
+  "testCasesPassed": "1",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "630a2f0ec125a12d30c0d111"
+  },
+  "exam": {
+    "$oid": "630a0496c125a12d30c0d0ed"
+  },
+  "question": {
+    "$oid": "62ffbfaadea21e4696ae6991"
+  },
+  "userId": {
+    "$oid": "6300052511529ffbf337143d"
+  },
+  "answer": "public int solution (int input1) {\n    //write your code here    \n    return 0;\n}",
+  "testCasesPassed": "1",
+  "__v": 0
+}]
