@@ -26,7 +26,7 @@ const findAllAssesmentByUserId = async (examineeId) => {
         //console.log(assesment);
         console.log(new Date().toLocaleString());
         const date = 30
-        const month = 8;
+        const month = 7;
         const year = 2022;
         console.log(date);
         console.log(month);
