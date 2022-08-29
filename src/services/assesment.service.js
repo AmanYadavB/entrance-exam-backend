@@ -24,9 +24,10 @@ const addAssesment = async (assesment) => {
 const findAllAssesmentByUserId = async (examineeId) => {
     try {
         //console.log(assesment);
-        const date = new Date().getDate()+1;
-        const month = new Date().getMonth();
-        const year = new Date().getFullYear();
+        console.log(new Date().toLocaleString());
+        const date = '30'
+        const month = '8';
+        const year = '2022';
         console.log(date);
         console.log(month);
         console.log(year);
