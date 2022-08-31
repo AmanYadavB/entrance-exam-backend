@@ -10,8 +10,9 @@ const usersRouter = require('./routes/api/users.routes')
 const assesmentRouter = require( './routes/api/assesments.routes' );
 const questionRouter = require('./routes/api/question.routes')
 const { request } = require('http');
-
-
+// const Amplify = require('aws-amplify')
+// const awsExports = require('./aws-exports')
+// Amplify.configure(awsExports);
 const app = express();
 
 app.use(cors());
