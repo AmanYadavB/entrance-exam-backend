@@ -9,7 +9,7 @@ def main_file():
     for i in range(len(test_cases)):
         output = solution( test_cases[i][0], test_cases[i][1], test_cases[i][2], test_cases[i][3])
         if output == expected_outputs[i]:
-            print(output+",yes,",sep='',end='')
+            print(output,",yes,",sep="",end="")
         else:
-            print(output+",no,",sep='',end='')
+            print(output,",no,",sep="",end="")
 main_file()
