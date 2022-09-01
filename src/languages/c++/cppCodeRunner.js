@@ -18,7 +18,7 @@ function runCppCode(){
         
         try{
             
-            let stdout2 = runCode(`a`);
+            let stdout2 = runCode(`./a.out`);
             console.log('no error');
             console.log(stdout2.toString());
             data.status = 'success';
