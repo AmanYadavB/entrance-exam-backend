@@ -27,10 +27,24 @@ const getUserByEmail = async ( email ) => {
         // email: email
         email
     });
-
     if( user === null ) {
         const error = new Error( 'Bad Credentials' );
         error.type = 'BadCredentials';
+        throw error;
+    }
+
+    return user;
+};
+
+const isNotRegistered = async ( email ) => {
+    const user = await User.findOne({
+        // email: email
+        email
+    });
+
+    if( user !== null ) {
+        const error = new Error( 'Conflict' );
+        error.type = 'Conflict';
         throw error;
     }
 
@@ -75,5 +89,6 @@ module.exports = {
     addUser,
     getUserByEmail,
     checkPassword,
-    findAllExaminees
+    findAllExaminees,
+    isNotRegistered
 }

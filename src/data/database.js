@@ -10,7 +10,7 @@ const process = require('process');
 //require( '../models/Topic' );
 
 const env = process.env.NODE_ENV;
-
+//const env = 'development';
 
 const connect = async () => {
     try {
