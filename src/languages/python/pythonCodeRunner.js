@@ -11,7 +11,7 @@ function runPythonCode(){
     };
     try{
    
-        let stdout1 = runCode(`python ${filename1}`);
+        let stdout1 = runCode(`python3 ${filename1}`);
         console.log('no error');
         console.log(stdout1.toString());
         data.status = 'success';
