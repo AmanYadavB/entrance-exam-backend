@@ -24,7 +24,7 @@ const addAssesment = async (assesment) => {
 const findAllAssesmentByUserId = async (examineeId) => {
     try {
         //console.log(assesment);
-        const dateArray = new Date().toLocaleDateString("en-Us","Asia/Kolkata").split("/");
+        const dateArray = new Date().toLocaleString("en-Us","Asia/Kolkata").split("/");
         const date = parseInt(dateArray[1]);
         const month = parseInt(dateArray[0]);
         const year = parseInt(dateArray[2]);
