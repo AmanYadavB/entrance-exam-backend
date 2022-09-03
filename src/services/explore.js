@@ -1,4 +1,4 @@
-const dateArray = new Date().toLocaleDateString().split("/");
+const dateArray = new Date().toLocaleDateString("en-US","Asia/Kolkata").split("/");
 console.log(dateArray);
 const date1 = parseInt(dateArray[1]);
         const month = parseInt(dateArray[0]);;

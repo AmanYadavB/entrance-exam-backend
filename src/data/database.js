@@ -9,8 +9,8 @@ const process = require('process');
 //require( '../models/Workshop' );
 //require( '../models/Topic' );
 
-//const env = process.env.NODE_ENV;
-const env = 'development';
+const env = process.env.NODE_ENV;
+//const env = 'development';
 
 const connect = async () => {
     try {
