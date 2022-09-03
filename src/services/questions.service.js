@@ -1,11 +1,12 @@
 const mongoose = require('mongoose');
 const Question = require("../models/question")
-const Assesment = require("../models/assesment");
+//const Assesment = require("../models/assesment");
 
 
 const addQuestion = async (question) => {
     try {
         const insertedWorkshop = await Question.create(question);
+        console.log(insertedWorkshop);
         return insertedWorkshop;
     } catch (error) {
         if (error.name === "ValidationError") {

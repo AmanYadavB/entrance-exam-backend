@@ -9,10 +9,8 @@ const postQuestion = async ( req, res, next ) => {
     console.log( 'claims = ', res.locals.claims );
     
     const question = req.body;
-    
     try {
         let updatedQuestion = await addQuestion( question );
-        
         res.status( 201 ).json({
             status: 'success',
             data: updatedQuestion
@@ -26,8 +24,6 @@ const postQuestion = async ( req, res, next ) => {
 
 const getAllQuestions = async ( req, res, next ) => {
     console.log( 'claims = ', res.locals.claims );
-    
-    //const question = req.body;
     
     try {
         let allQuestions = await getQuestions();

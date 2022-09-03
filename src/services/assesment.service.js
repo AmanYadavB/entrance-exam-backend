@@ -26,8 +26,8 @@ const findAllAssesmentByUserId = async (examineeId) => {
         //console.log(assesment);
         const dateArray = new Date().toLocaleDateString().split("/");
         const date = parseInt(dateArray[1]);
-        const month = parseInt(dateArray[0]);;
-        const year = parseInt(dateArray[2]);;
+        const month = parseInt(dateArray[0]);
+        const year = parseInt(dateArray[2]);
         console.log(date);
         console.log(month);
         console.log(year);
