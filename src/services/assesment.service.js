@@ -24,10 +24,15 @@ const addAssesment = async (assesment) => {
 const findAllAssesmentByUserId = async (examineeId) => {
     try {
         //console.log(assesment);
-        const dateArray = new Date().toLocaleString("en-Us","Asia/Kolkata").split("/");
-        const date = parseInt(dateArray[1]);
-        const month = parseInt(dateArray[0]);
-        const year = parseInt(dateArray[2]);
+        const dateObj = new Date();
+
+        //console.log("current Time", date);
+        const ISToffSet = 330; //IST is 5:30; i.e. 60*5+30 = 330 in minutes 
+        offset= ISToffSet*60*1000;
+        const ISTTime = new Date(dateObj.getTime()+offset);
+        const date = ISTTime.getDate();
+        const month = ISTTime.getMonth()+1;
+        const year = ISTTime.getFullYear();
         console.log(date);
         console.log(month);
         console.log(year);
