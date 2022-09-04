@@ -3,6 +3,7 @@ const {
     postAnswer,
     postAssesment,
     getAllAssesments,
+    getSampleAssesment,
     getAllAssesmentByUserId,
     getAssesmentById,
     deleteAssesmentById
@@ -18,7 +19,8 @@ const router = express.Router();
 
 router.post( '/answer',authenticate, authorize( ['examinee'] ), postAnswer );
 router.post('/', authenticate , authorize( ['examiner'] ), postAssesment);
-router.get('/allassesments', authenticate, authorize(['examiner']), getAllAssesments)
+router.get('/allassesments', authenticate, authorize(['examiner']), getAllAssesments);
+router.get('/sample', authenticate, getSampleAssesment)
 router.get('/', authenticate, getAllAssesmentByUserId);
 router.get('/:id',authenticate, getAssesmentById)
 router.delete('/:id',authenticate, authorize( ['examiner']), deleteAssesmentById)

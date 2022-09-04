@@ -6,6 +6,7 @@ const {
     findAllAssesmentByUserId,
     findAssesmentById,
     findAllAssesments,
+    findSampleAssesment,
     deleteOneAssesmentById
 } = require('../../services/assesment.service');
 
@@ -129,6 +130,23 @@ const getAllAssesments = async (req, res, next) => {
         }
 }
 
+const getSampleAssesment = async (req, res, next) => {
+
+    console.log( 'claims = ', res.locals.claims );
+    try {
+        let sampleAssesment = await findSampleAssesment();
+            
+            res.status( 201 ).json({
+                status: 'success',
+                data: sampleAssesment
+            });
+        } catch( error ) {
+            const httpError = new HttpError( error.message, 400 );
+    
+            next( httpError );
+        }
+}
+
 const getAssesmentById = async (req, res, next) => {
 
     console.log( 'claims = ', res.locals.claims );
@@ -171,6 +189,7 @@ module.exports = {
     postAnswer,
     postAssesment,
     getAllAssesments,
+    getSampleAssesment,
     getAllAssesmentByUserId,
     getAssesmentById,
     deleteAssesmentById

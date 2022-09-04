@@ -113,6 +113,29 @@ const findAssesmentById = async (id) => {
     }
 };
 
+const findSampleAssesment = async () => {
+    try {
+        //console.log(assesment);
+        const assesment = await Assesment.findOne({
+            name: 'Sample Exam'
+        }).populate("questions");
+        console.log(assesment);
+        return assesment;
+    } catch (error) {
+        if (error.name === "ValidationError") {
+            const dbError = new Error(`Validation error : ${error.message}`);
+            dbError.type = "ValidationError";
+            throw dbError;
+        }
+
+        if (error.name === "CastError") {
+            const dbError = new Error(`Data type error : ${error.message}`);
+            dbError.type = "CastError";
+            throw dbError;
+        }
+    }
+};
+
 const deleteOneAssesmentById = async (id) => {
     try {
         //console.log(assesment);
@@ -139,5 +162,6 @@ module.exports = {
     findAllAssesments,
     findAllAssesmentByUserId,
     findAssesmentById,
+    findSampleAssesment,
     deleteOneAssesmentById
 }
