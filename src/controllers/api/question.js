@@ -62,7 +62,7 @@ const deleteQuestionById = async (req, res, next) => {
 
     console.log( 'claims = ', res.locals.claims );
     const id = req.params.id;
-    //console.log(assesment);
+    
     try {
         let deletedQuestion = await deleteOneQuestionById(id);
             

@@ -40,10 +40,10 @@ const postAnswer = async ( req, res, next ) => {
 }
     else if(data.data.language=='python'){
         try {
-            console.log(data.data.code);
+            
             await writePythonCodeFiles(data);
             const dataToReturn = runPythonCode();
-            console.log(dataToReturn);
+            
             res.status( 201 ).json({
                 status: dataToReturn.status,
                 data: dataToReturn.returnData
@@ -57,10 +57,10 @@ const postAnswer = async ( req, res, next ) => {
 
     else if(data.data.language=='c_cpp'){
         try {
-            console.log(data.data.code);
+           
             await writeCppCodeFiles(data);
             const dataToReturn = runCppCode();
-            console.log(dataToReturn);
+            
             res.status( 201 ).json({
                 status: dataToReturn.status,
                 data: dataToReturn.returnData
@@ -78,7 +78,7 @@ const postAssesment = async (req, res, next) => {
 
     console.log( 'claims = ', res.locals.claims );
     const assesment = req.body;
-    console.log(assesment);
+    
     try {
         let addedAssesment = await addAssesment( assesment );
             
@@ -97,8 +97,7 @@ const getAllAssesmentByUserId = async (req, res, next) => {
 
     console.log( 'claims = ', res.locals.claims );
     const examineeId = req.query.userId
-    //const assesment = req.body;
-    //console.log(assesment);
+    
     try {
         let addedAssesment = await findAllAssesmentByUserId(examineeId);
             
@@ -151,7 +150,7 @@ const getAssesmentById = async (req, res, next) => {
 
     console.log( 'claims = ', res.locals.claims );
     const id = req.params.id;
-    //console.log(assesment);
+   
     try {
         let addedAssesment = await findAssesmentById(id);
             
@@ -170,7 +169,7 @@ const deleteAssesmentById = async (req, res, next) => {
 
     console.log( 'claims = ', res.locals.claims );
     const id = req.params.id;
-    //console.log(assesment);
+   
     try {
         let deletedAssesment = await deleteOneAssesmentById(id);
             

@@ -24,7 +24,6 @@ const addUser = async ( user ) => {
 
 const getUserByEmail = async ( email ) => {
     const user = await User.findOne({
-        // email: email
         email
     });
     if( user === null ) {
@@ -38,7 +37,6 @@ const getUserByEmail = async ( email ) => {
 
 const isNotRegistered = async ( email ) => {
     const user = await User.findOne({
-        // email: email
         email
     });
 

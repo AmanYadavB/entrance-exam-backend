@@ -4,8 +4,7 @@ const Answer = require('../models/answer')
 
 const addAnswer = async (answer) => {
     try {
-        //console.log(answer);
-        //const insertedAnswer = {};
+        
         const isSubmittedPreviously = await Answer.find({
             $and: [
                 {
@@ -19,10 +18,10 @@ const addAnswer = async (answer) => {
                 }
             ]
         });
-        console.log(isSubmittedPreviously);
+        
         if (isSubmittedPreviously.length==0) {
             const insertedAnswer = await Answer.create(answer);
-            console.log('new');
+            
             return insertedAnswer;
         }
         else {
@@ -37,7 +36,7 @@ const addAnswer = async (answer) => {
                     }
                 }
             );
-            console.log('old');
+            
             return insertedAnswer;
         }
         
@@ -58,7 +57,7 @@ const addAnswer = async (answer) => {
 
 const findUsers = async (examId) => {
     try {
-        console.log(examId);
+        
         const submittedAnswer = await Answer.find({
             exam: examId
             },
@@ -84,7 +83,7 @@ const findUsers = async (examId) => {
 
 const findAnswerOfUser = async (examId, userId) => {
     try {
-        console.log(examId);
+        
         const submittedAnswer = await Answer.find({
             $and: [
                 {
@@ -99,7 +98,7 @@ const findAnswerOfUser = async (examId, userId) => {
                 answer: true,
                 testCasesPassed: true
             }).populate("question");
-        console.log(submittedAnswer);
+        
         return submittedAnswer;
     } catch (error) {
         if (error.name === "ValidationError") {

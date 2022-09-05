@@ -8,8 +8,6 @@ const getUsers = async (req, res, next) => {
 
     console.log( 'claims = ', res.locals.claims );
     const examId = req.params.id
-    //const assesment = req.body;
-    //console.log(assesment);
     try {
         let users = await findUsers(examId);
             
@@ -29,8 +27,6 @@ const getAnswerOfUser = async (req, res, next) => {
     console.log( 'claims = ', res.locals.claims );
     const examId = req.params.id;
     const userId = req.query.userId;
-    //const assesment = req.body;
-    //console.log(assesment);
     try {
         let users = await findAnswerOfUser(examId, userId);
             
@@ -49,7 +45,6 @@ const submitAnswer = async (req, res, next) => {
 
     console.log( 'claims = ', res.locals.claims );
     const assesment = req.body;
-    console.log(assesment);
     try {
         let addedAssesment = await addAnswer( assesment );
             

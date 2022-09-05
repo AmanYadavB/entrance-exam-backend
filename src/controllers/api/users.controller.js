@@ -31,7 +31,7 @@ const registerUser = async(req, res, next) => {
             data: userToSend 
             });
         } catch( error ) {
-            //console.log(error.type);
+            
             if (error.type === 'Conflict') {
                 const httpError = new HttpError( error.message, 409 );
         
@@ -48,7 +48,7 @@ const registerUser = async(req, res, next) => {
 
     const loginUser = async ( req, res, next ) => {
         const credentials = req.body;
-        console.log('reached');
+        
         if( !( credentials?.email && credentials?.password ) ) {
             const httpError = new HttpError( "Bad request", 400 );
     
@@ -59,11 +59,11 @@ const registerUser = async(req, res, next) => {
         const { email, password } = credentials;
     
         try {
-            console.log('arrived');
+            
             const user = await getUserByEmail( email );
-            console.log(user);
+           
             await checkPassword( user, password );
-            console.log('aman');
+            
             const claims = {
                 role: user.role,
                 email: user.email, 
@@ -73,11 +73,11 @@ const registerUser = async(req, res, next) => {
             jwt.sign( claims, process.env.JWT_SECRET, function( error, token ) {
                 
                 if( error ) {
-                    console.log(process.env.JWT_SECRET);
+                    
                     const httpError = new HttpError( "Internal Server Error", 500 );
                     next( httpError );
                 }
-                console.log(process.env);
+                
                 res.json({
                     status: 'success',
                     data: {
@@ -102,8 +102,6 @@ const registerUser = async(req, res, next) => {
 
     const getAllExaminees = async ( req, res, next ) => {
         console.log( 'claims = ', res.locals.claims );
-        
-        //const question = req.body;
         
         try {
             let allExaminees = await findAllExaminees();

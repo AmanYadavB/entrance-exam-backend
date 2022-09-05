@@ -3,7 +3,7 @@ const Assesment = require('../models/assesment')
 
 const addAssesment = async (assesment) => {
     try {
-        console.log(assesment);
+        
         const insertedAssesment = await Assesment.create(assesment);
         return insertedAssesment;
     } catch (error) {
@@ -23,19 +23,13 @@ const addAssesment = async (assesment) => {
 
 const findAllAssesmentByUserId = async (examineeId) => {
     try {
-        //console.log(assesment);
         const dateObj = new Date();
-
-        //console.log("current Time", date);
-        const ISToffSet = 330; //IST is 5:30; i.e. 60*5+30 = 330 in minutes 
+        const ISToffSet = 330; 
         offset= ISToffSet*60*1000;
         const ISTTime = new Date(dateObj.getTime()+offset);
         const date = ISTTime.getDate();
         const month = ISTTime.getMonth()+1;
         const year = ISTTime.getFullYear();
-        console.log(date);
-        console.log(month);
-        console.log(year);
         const todaysAssesment = await Assesment.find(
             {
                 $and:[
@@ -54,7 +48,6 @@ const findAllAssesmentByUserId = async (examineeId) => {
                 ]
             }
         );
-        console.log(todaysAssesment);
         return todaysAssesment;
     } catch (error) {
         if (error.name === "ValidationError") {
@@ -73,9 +66,8 @@ const findAllAssesmentByUserId = async (examineeId) => {
 
 const findAllAssesments = async () => {
     try {
-        //console.log(assesment);
+        
         const allassesments = await Assesment.find().populate("questions").populate("examinees");
-        console.log(allassesments);
         return allassesments;
     } catch (error) {
         if (error.name === "ValidationError") {
@@ -94,9 +86,8 @@ const findAllAssesments = async () => {
 
 const findAssesmentById = async (id) => {
     try {
-        //console.log(assesment);
+       
         const assesment = await Assesment.findById(id).populate("questions");
-        console.log(assesment);
         return assesment;
     } catch (error) {
         if (error.name === "ValidationError") {
@@ -115,11 +106,9 @@ const findAssesmentById = async (id) => {
 
 const findSampleAssesment = async () => {
     try {
-        //console.log(assesment);
         const assesment = await Assesment.findOne({
             name: 'Sample Exam'
         }).populate("questions");
-        console.log(assesment);
         return assesment;
     } catch (error) {
         if (error.name === "ValidationError") {
@@ -138,9 +127,7 @@ const findSampleAssesment = async () => {
 
 const deleteOneAssesmentById = async (id) => {
     try {
-        //console.log(assesment);
         const assesment = await Assesment.findByIdAndDelete(id);
-        console.log(assesment);
         return assesment;
     } catch (error) {
         if (error.name === "ValidationError") {
